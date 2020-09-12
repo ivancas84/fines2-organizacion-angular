@@ -54,6 +54,7 @@ import { DialogAlertComponent } from '@component/dialog-alert/dialog-alert.compo
 import { InputAutocompleteComponent } from '@component/input-autocomplete/input-autocomplete.component';
 import { InputDateComponent } from '@component/input-date/input-date.component';
 import { InputSelectComponent } from '@component/input-select/input-select.component';
+import { InputSelectValueComponent } from '@component/input-select-value/input-select-value.component';
 import { InputSearchGoComponent } from '@component/input-search-go/input-search-go.component';
 import { InputTextComponent } from '@component/input-text/input-text.component';
 import { InputYmComponent } from '@component/input-ym/input-ym.component';
@@ -68,6 +69,7 @@ import { PersonaSearchParamsComponent } from '@component/persona-show/persona-se
 import { CantidadAlumnosComponent } from '@component/cantidad-alumnos/cantidad-alumnos.component';
 import { DynamicTableComponent } from '@component/dynamic-table/dynamic-table.component';
 import { CantidadAlumnosTableComponent } from '@component/cantidad-alumnos/persona-table/cantidad-alumnos-table.component';
+import { InputAutocompleteValueComponent } from '@component/input-autocomplete-value/input-autocomplete-value.component';
 
 @NgModule({
   declarations: [
@@ -82,8 +84,10 @@ import { CantidadAlumnosTableComponent } from '@component/cantidad-alumnos/perso
 
     DialogAlertComponent,
     InputAutocompleteComponent,
+    InputAutocompleteValueComponent,
     InputDateComponent,
     InputSelectComponent,
+    InputSelectValueComponent,
     InputSearchGoComponent,
     InputTextComponent,
     InputYmComponent,
