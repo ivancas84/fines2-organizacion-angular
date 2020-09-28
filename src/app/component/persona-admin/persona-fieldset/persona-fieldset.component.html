@@ -1,0 +1,113 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Persona</mat-card-title>
+  </mat-card-header>
+  <mat-card-content [formGroup]="fieldset">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="region" [title]="'Region'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="distrito" [title]="'Distrito'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="localidad" [title]="'Localidad'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="programa" [title]="'Programa'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="inscripcionMen" [title]="'Inscripcion Men'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-text [field]="cens" [title]="'Cens'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="sede" [title]="'Sede'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="comision" [title]="'Comision'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="tramo" [title]="'Tramo'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="identificador" [title]="'Identificador'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="numeroInscripcion" [title]="'Numero Inscripcion'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="numeroDocumento" [title]="'Numero Documento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="apellidos" [title]="'Apellidos'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="nombres" [title]="'Nombres'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="genero" [title]="'Genero'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="telefono" [title]="'Telefono'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="correo" [title]="'Correo'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="trayectoriaEducativa" [title]="'Trayectoria Educativa'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="turno" [title]="'Turno'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-checkbox [field]="pcEscritorio" [title]="'Pc Escritorio'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="netNotebook" [title]="'Net Notebook'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-checkbox [field]="tablet" [title]="'Tablet'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="pcTablet" [title]="'Pc Tablet'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-checkbox [field]="impresora" [title]="'Impresora'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="conexionInternetPaga" [title]="'Conexion Internet Paga'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-text [field]="telefonoCelular" [title]="'Telefono Celular'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="comision2020" [title]="'Comision 2020'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-checkbox [field]="archivo2019" [title]="'Archivo 2019'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="archivo2020" [title]="'Archivo 2020'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-checkbox [field]="drive" [title]="'Drive'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="cuil" [title]="'Cuil'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-checkbox [field]="analiticoDni" [title]="'Analitico Dni'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="analiticoCuil" [title]="'Analitico Cuil'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-checkbox [field]="analiticoPartida" [title]="'Analitico Partida'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="analiticoCertificado" [title]="'Analitico Certificado'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-date [field]="fechaNacimiento" [title]="'Fecha Nacimiento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-date>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="ingreso" [title]="'Ingreso'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-textarea [field]="observaciones" [title]="'Observaciones'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-textarea>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="activo" [title]="'Activo'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>
+        <core-input-text [field]="fila" [title]="'Fila'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-textarea [field]="error" [title]="'Error'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-textarea>
+        <core-input-text [field]="idComision" [title]="'Id Comision'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>    
+  </mat-card-content>
+</mat-card>

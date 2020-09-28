@@ -4,6 +4,7 @@ import { SessionStorageService } from '../core/service/storage/session-storage.s
 import { ParserService } from '../core/service/parser/parser.service';
 import { DataDefinition } from '../core/class/data-definition';
 
+import { ComisionDataDefinition } from '../class/data-definition/comision-data-definition';
 import { PersonaDataDefinition } from '../class/data-definition/persona-data-definition';
 
 @Injectable({
@@ -15,6 +16,7 @@ export class DataDefinitionLoaderService {
 
   get(name: string): DataDefinition {
     switch(name) {
+      case "comision": { return new ComisionDataDefinition(this.stg, this.parser); }
       case "persona": { return new PersonaDataDefinition(this.stg, this.parser); }
     }
   }

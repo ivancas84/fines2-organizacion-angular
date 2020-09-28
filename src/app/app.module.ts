@@ -9,16 +9,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialFileInputModule } from 'ngx-material-file-input';
-//import { ClipboardModule } from '@angular/cdk/clipboard';
-//import { DATE_FORMATS } from './core/const/DATE_FORMATS';
+import { MatTimepickerModule } from 'mat-timepicker';
 
-import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher, MAT_DATE_LOCALE, DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
+//import { ClipboardModule } from '@angular/cdk/clipboard';
+
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from '@angular/material/core';
 import { MatNativeDateModule } from '@angular/material/core';
-//import { MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
@@ -51,13 +52,21 @@ import { SummaryPipe } from '@pipe/summary.pipe';
 import { DataDefinitionLoaderService } from '@service/data-definition-loader.service';
 
 import { DialogAlertComponent } from '@component/dialog-alert/dialog-alert.component';
+import { DialogConfirmComponent } from '@component/dialog-confirm/dialog-confirm.component';
 import { InputAutocompleteComponent } from '@component/input-autocomplete/input-autocomplete.component';
+import { InputCheckboxComponent } from '@component/input-checkbox/input-checkbox.component';
 import { InputDateComponent } from '@component/input-date/input-date.component';
+import { InputSelectCheckboxComponent } from '@component/input-select-checkbox/input-select-checkbox.component';
 import { InputSelectComponent } from '@component/input-select/input-select.component';
 import { InputSelectValueComponent } from '@component/input-select-value/input-select-value.component';
+import { InputSelectParamComponent } from '@component/input-select-param/input-select-param.component';
 import { InputSearchGoComponent } from '@component/input-search-go/input-search-go.component';
 import { InputTextComponent } from '@component/input-text/input-text.component';
-import { InputYmComponent } from '@component/input-ym/input-ym.component';
+import { InputTextareaComponent } from '@component/input-textarea/input-textarea.component';
+import { InputTimepickerComponent } from '@component/input-timepicker/input-timepicker.component';
+
+//import { InputYmComponent } from '@component/input-ym/input-ym.component';
+import { InputYearComponent } from '@component/input-year/input-year.component';
 import { MenuComponent } from '@component/menu/menu.component';
 import { SearchAllComponent } from '@component/search-all/search-all.component';
 import { LabelComponent } from '@component/label/label.component';
@@ -70,6 +79,8 @@ import { CantidadAlumnosComponent } from '@component/cantidad-alumnos/cantidad-a
 import { DynamicTableComponent } from '@component/dynamic-table/dynamic-table.component';
 import { CantidadAlumnosTableComponent } from '@component/cantidad-alumnos/persona-table/cantidad-alumnos-table.component';
 import { InputAutocompleteValueComponent } from '@component/input-autocomplete-value/input-autocomplete-value.component';
+import { PersonaAdminComponent } from '@component/persona-admin/persona-admin/persona-admin.component';
+import { PersonaFieldsetComponent } from '../../tmp/component/fieldset/persona-fieldset/persona-fieldset.component';
 
 @NgModule({
   declarations: [
@@ -83,21 +94,29 @@ import { InputAutocompleteValueComponent } from '@component/input-autocomplete-v
     StoragePipe,
 
     DialogAlertComponent,
+    DialogConfirmComponent,
     InputAutocompleteComponent,
     InputAutocompleteValueComponent,
+    InputCheckboxComponent,
     InputDateComponent,
+    InputSelectCheckboxComponent,
     InputSelectComponent,
     InputSelectValueComponent,
+    InputSelectParamComponent,
     InputSearchGoComponent,
     InputTextComponent,
-    InputYmComponent,
+    InputTextareaComponent,
+    InputTimepickerComponent,
+    InputYearComponent,
+    //InputYmComponent,
     MenuComponent,
     SearchAllComponent,
     LabelComponent,
     DynamicTableComponent,
 
     CantidadAlumnosComponent, CantidadAlumnosTableComponent,
-    PersonaShowComponent, PersonaTableComponent, PersonaSearchComponent, PersonaSearchParamsComponent
+    PersonaShowComponent, PersonaTableComponent, PersonaSearchComponent, PersonaSearchParamsComponent,
+    PersonaAdminComponent, PersonaFieldsetComponent
   ],
   imports: [
     BrowserModule,
@@ -114,6 +133,7 @@ import { InputAutocompleteValueComponent } from '@component/input-autocomplete-v
     MatAutocompleteModule,
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
     MatDatepickerModule,
     MatDialogModule,
     MatDividerModule,
@@ -131,15 +151,13 @@ import { InputAutocompleteValueComponent } from '@component/input-autocomplete-v
     MatTableModule,
     MatToolbarModule,
 
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    MatTimepickerModule
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher},
     {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2000, verticalPosition:"top", horizontalPosition:"right"}},
     {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },
-    //{provide: MAT_DATE_LOCALE, useValue: 'es-AR' },
-    //{provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]},
-    //{provide: MAT_DATE_FORMATS, useValue: DATE_FORMATS},
 
     DataDefinitionService, 
     SessionStorageService, 

@@ -26,7 +26,7 @@ export class CantidadAlumnosComponent {
   ) {}
 
   ngOnInit(): void {
-    this.dd.base("cantidad_alumnos").pipe(first()).subscribe(
+    this.dd.post("base", "cantidad_alumnos").pipe(first()).subscribe(
       rows => { this.data$.next(rows); }
     ); 
   }
