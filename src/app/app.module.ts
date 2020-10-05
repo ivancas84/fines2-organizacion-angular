@@ -80,7 +80,8 @@ import { DynamicTableComponent } from '@component/dynamic-table/dynamic-table.co
 import { CantidadAlumnosTableComponent } from '@component/cantidad-alumnos/persona-table/cantidad-alumnos-table.component';
 import { InputAutocompleteValueComponent } from '@component/input-autocomplete-value/input-autocomplete-value.component';
 import { PersonaAdminComponent } from '@component/persona-admin/persona-admin/persona-admin.component';
-import { PersonaFieldsetComponent } from '../../tmp/component/fieldset/persona-fieldset/persona-fieldset.component';
+import { PersonaFieldsetComponent } from '@component/persona-admin/persona-fieldset/persona-fieldset.component';
+
 
 @NgModule({
   declarations: [
