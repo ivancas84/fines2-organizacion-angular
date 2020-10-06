@@ -71,20 +71,12 @@ import { InputYearComponent } from '@component/input-year/input-year.component';
 import { MenuComponent } from '@component/menu/menu.component';
 import { SearchAllComponent } from '@component/search-all/search-all.component';
 import { LabelComponent } from '@component/label/label.component';
+import { DynamicTableComponent } from '@component/dynamic-table/dynamic-table.component';
+import { InputAutocompleteValueComponent } from '@component/input-autocomplete-value/input-autocomplete-value.component';
 
 import { PersonaShowComponent } from '@component/persona-show/persona-show/persona-show.component';
 import { PersonaTableComponent } from '@component/persona-show/persona-table/persona-table.component';
-import { PersonaSearchComponent } from '@component/persona-show/persona-search/persona-search.component';
-import { PersonaSearchParamsComponent } from '@component/persona-show/persona-search-params/persona-search-params.component';
-import { CantidadAlumnosComponent } from '@component/cantidad-alumnos/cantidad-alumnos.component';
-import { DynamicTableComponent } from '@component/dynamic-table/dynamic-table.component';
-import { CantidadAlumnosTableComponent } from '@component/cantidad-alumnos/persona-table/cantidad-alumnos-table.component';
-import { InputAutocompleteValueComponent } from '@component/input-autocomplete-value/input-autocomplete-value.component';
-import { PersonaAdminComponent } from '@component/persona-admin/persona-admin/persona-admin.component';
-import { PersonaFieldsetComponent } from '@component/persona-admin/persona-fieldset/persona-fieldset.component';
 
-import { PersonaAdminArrayComponent } from '@component/persona-admin-array/persona-admin-array/persona-admin-array.component';
-import { PersonaFieldsetArrayComponent } from '@component/persona-admin-array/persona-fieldset-array/persona-fieldset-array.component';
 
 @NgModule({
   declarations: [
@@ -118,11 +110,8 @@ import { PersonaFieldsetArrayComponent } from '@component/persona-admin-array/pe
     LabelComponent,
     DynamicTableComponent,
 
-    CantidadAlumnosComponent, CantidadAlumnosTableComponent,
-    PersonaShowComponent, PersonaTableComponent, PersonaSearchComponent, PersonaSearchParamsComponent,
-    PersonaAdminComponent, PersonaFieldsetComponent,
+    PersonaShowComponent, PersonaTableComponent
 
-    PersonaAdminArrayComponent, PersonaFieldsetArrayComponent,
   ],
   imports: [
     BrowserModule,
