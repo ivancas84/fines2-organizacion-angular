@@ -1,0 +1,55 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Alumnos comision {{idValue}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let row of fieldset.controls; let i=index" [formGroup]="fg(i)">
+    
+    <div fxLayout="row" *ngIf="!_delete(i).value">
+
+    <div fxLayout="column">
+
+    <div fxLayout="row" fxFlex="90%" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="cens(i)" [title]="'Cens'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="comision(i)" [title]="'Comision'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="tramo(i)" [title]="'Tramo'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="idComision(i)" [title]="'Id Comision'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+    </div>  
+    <div fxLayout="row" fxFlex="90%" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="numeroDocumento(i)" [title]="'Numero Documento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-date [field]="fechaNacimiento(i)" [title]="'Fecha Nacimiento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-date>    
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="apellidos(i)" [title]="'Apellidos'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="nombres(i)" [title]="'Nombres'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>        
+      </div>
+    </div>  
+    <div fxLayout="row" fxFlex="90%" fxLayout.lt-md="column" fxLayoutGap="10px">    
+      <div fxLayout="row" fxFlex="100%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-checkbox [field]="activo(i)" [title]="'Activo'" fxFlex="25%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-checkbox>        
+        <core-input-textarea [field]="error(i)" [title]="'Error'" fxFlex="100%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-textarea>
+      </div>
+    </div>  
+    
+    </div> <!--div fxLayout="column"-->
+    
+    <div fxLayout="row" fxFlex="10%" fxLayoutGap="10px" fxLayout.xs="column" fxLayoutAlign="center center">
+      <button mat-mini-fab color="warn" (click)="remove(i)" type="button"><mat-icon matBadge="{{(i+1)}}">delete</mat-icon></button>
+
+    </div>
+
+    </div> <!--div fxLayout="row" *ngIf="!_delete(i).value"-->
+
+    <div *ngIf="!_delete(i).value"><mat-divider></mat-divider><br></div>
+    
+    </div>
+    <button mat-mini-fab color="primary" (click)="add()" type="button"><mat-icon>add</mat-icon></button>
+    
+    </mat-card-content>
+  </mat-card>
+  

@@ -17,6 +17,7 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher} from '@angular/materia
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatBadgeModule} from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -82,6 +83,8 @@ import { InputAutocompleteValueComponent } from '@component/input-autocomplete-v
 import { PersonaAdminComponent } from '@component/persona-admin/persona-admin/persona-admin.component';
 import { PersonaFieldsetComponent } from '@component/persona-admin/persona-fieldset/persona-fieldset.component';
 
+import { PersonaAdminArrayComponent } from '@component/persona-admin-array/persona-admin-array/persona-admin-array.component';
+import { PersonaFieldsetArrayComponent } from '@component/persona-admin-array/persona-fieldset-array/persona-fieldset-array.component';
 
 @NgModule({
   declarations: [
@@ -117,7 +120,9 @@ import { PersonaFieldsetComponent } from '@component/persona-admin/persona-field
 
     CantidadAlumnosComponent, CantidadAlumnosTableComponent,
     PersonaShowComponent, PersonaTableComponent, PersonaSearchComponent, PersonaSearchParamsComponent,
-    PersonaAdminComponent, PersonaFieldsetComponent
+    PersonaAdminComponent, PersonaFieldsetComponent,
+
+    PersonaAdminArrayComponent, PersonaFieldsetArrayComponent,
   ],
   imports: [
     BrowserModule,
@@ -132,6 +137,7 @@ import { PersonaFieldsetComponent } from '@component/persona-admin/persona-field
     //ClipboardModule,
 
     MatAutocompleteModule,
+    MatBadgeModule,
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,

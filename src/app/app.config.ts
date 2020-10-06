@@ -7,6 +7,8 @@ export const HTTP_OPTIONS = {
 };
 
 export const UPLOAD_URL = 'upload/';
-export const API_URL = 'http://localhost/fines2-organizacion/api/';
+//export const API_URL = 'http://localhost/fines2-organizacion/api/';
+export const API_URL = 'http://planfines2.com.ar/admin-alumnos-estructura/api/';
+
 
 
