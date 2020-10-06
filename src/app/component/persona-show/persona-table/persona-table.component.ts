@@ -10,6 +10,6 @@ import { TableComponent } from '@component/table/table.component';
   `],
 })
 export class PersonaTableComponent extends TableComponent { 
-  displayedColumns: string[] = ['apellidos', 'nombres', 'numero_documento', 'fecha_nacimiento', 'telefono', 'correo', 'opciones'];
+  displayedColumns: string[] = ['apellidos', 'nombres', 'numero_documento', 'fecha_nacimiento', 'telefono', 'correo'];
 
 }
