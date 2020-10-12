@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Persona</mat-card-title>
+  </mat-card-header>
+  <mat-card-content [formGroup]="fieldset">
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="apellidos" [title]="'Apellidos'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="nombres" [title]="'Nombres'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>
+      <div fxLayout="row" fxFlex="50%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="numeroDocumento" [title]="'Numero Documento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-date [field]="fechaNacimiento" [title]="'Fecha Nacimiento'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-date>
+      </div>
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="100%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="telefono" [title]="'Telefono'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+        <core-input-text [field]="correo" [title]="'Correo'" fxFlex="50%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>      
+    </div>  
+    <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+      <div fxLayout="row" fxFlex="100%" fxFlex.lt-md="100%" fxLayoutGap="10px" fxLayout.xs="column">
+        <core-input-text [field]="observaciones" [title]="'Descripción de la sede / comision / año que debe cursar'" fxFlex="100%" fxFlex.xs="100%" fxLayoutAlign="center center"></core-input-text>
+      </div>      
+    </div>  
+  </mat-card-content>
+</mat-card>

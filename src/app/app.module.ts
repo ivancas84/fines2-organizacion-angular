@@ -85,6 +85,8 @@ import { PersonaFieldsetComponent } from '@component/persona-admin/persona-field
 
 import { PersonaAdminArrayComponent } from '@component/persona-admin-array/persona-admin-array/persona-admin-array.component';
 import { PersonaFieldsetArrayComponent } from '@component/persona-admin-array/persona-fieldset-array/persona-fieldset-array.component';
+import { AlumnoAdminComponent } from '@component/alumno-admin/persona-admin/persona-admin.component';
+import { AlumnoFieldsetComponent } from '@component/alumno-admin/persona-fieldset/persona-fieldset.component';
 
 @NgModule({
   declarations: [
@@ -118,10 +120,10 @@ import { PersonaFieldsetArrayComponent } from '@component/persona-admin-array/pe
     LabelComponent,
     DynamicTableComponent,
 
+    AlumnoAdminComponent, AlumnoFieldsetComponent,
     CantidadAlumnosComponent, CantidadAlumnosTableComponent,
     PersonaShowComponent, PersonaTableComponent, PersonaSearchComponent, PersonaSearchParamsComponent,
     PersonaAdminComponent, PersonaFieldsetComponent,
-
     PersonaAdminArrayComponent, PersonaFieldsetArrayComponent,
   ],
   imports: [
