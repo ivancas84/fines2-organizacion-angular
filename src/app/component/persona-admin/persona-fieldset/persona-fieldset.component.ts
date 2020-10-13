@@ -30,10 +30,10 @@ readonly entityName: string = 'persona';
     let fg: FormGroup = this.fb.group({
       id:null,
       region: [null, {
-        validators: [Validators.required],
+        //validators: [Validators.required],
       }],
       distrito: [null, {
-        validators: [Validators.required],
+        //validators: [Validators.required],
       }],
       localidad: [null, {
       }],

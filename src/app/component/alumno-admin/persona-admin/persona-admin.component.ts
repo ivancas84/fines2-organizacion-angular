@@ -8,6 +8,7 @@ import { AdminComponent } from '@component/admin/admin.component';
 import { DataDefinitionService } from '@service/data-definition/data-definition.service';
 import { ValidatorsService } from '@service/validators/validators.service';
 import { SessionStorageService } from '@service/storage/session-storage.service';
+import { emptyUrl } from '@function/empty-url.function';
 
 @Component({
   selector: 'app-alumno-admin',
@@ -46,11 +47,7 @@ export class AlumnoAdminComponent extends AdminComponent {
      * Se reciben los datos del alumno, si existe comision 2020, se redirecciona a una web para visualizar los datos de la comision y profesores
      * Si no existe comision 2020, se imprime un mensaje
      */
-    //if(response["id"])
-    //let route = emptyUrl(this.router.url) + "?id="+response["id"];
-    //this.router.navigateByUrl('/' + route, {replaceUrl: true});
-    //else this.setData();
-    //this.isSubmitted = false;
+    this.router.navigateByUrl('/curso-show' + "?id="+response["id"], {replaceUrl: true});
   }
 }
 
