@@ -89,6 +89,10 @@ import { AlumnoAdminComponent } from '@component/alumno-admin/persona-admin/pers
 import { AlumnoFieldsetComponent } from '@component/alumno-admin/persona-fieldset/persona-fieldset.component';
 import { CursoShowComponent } from '@component/curso-show/curso-show/curso-show.component';
 import { CursoTableComponent } from '@component/curso-show/curso-table/curso-table.component';
+import { ListaAlumnosReferenteComponent } from '@component/lista-alumnos-referentes/lista-alumnos-referente/lista-alumnos-referente.component';
+import { ListaAlumnosReferenteTableComponent } from '@component/lista-alumnos-referentes/lista-alumnos-referente-table/lista-alumnos-referente-table.component';
+import { ArPersonaShowComponent } from '@component/alumnos-referentes-show/persona-show/persona-show.component';
+import { ArPersonaTableComponent } from '@component/alumnos-referentes-show/persona-table/persona-table.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +132,8 @@ import { CursoTableComponent } from '@component/curso-show/curso-table/curso-tab
     PersonaAdminComponent, PersonaFieldsetComponent,
     PersonaAdminArrayComponent, PersonaFieldsetArrayComponent,
     CursoShowComponent, CursoTableComponent,
+    ListaAlumnosReferenteComponent, ListaAlumnosReferenteTableComponent,
+    ArPersonaShowComponent, ArPersonaTableComponent,
   ],
   imports: [
     BrowserModule,
