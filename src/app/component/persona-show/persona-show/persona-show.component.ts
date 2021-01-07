@@ -22,8 +22,7 @@ export class PersonaShowComponent extends ShowComponent {
 
     super(dd, route, router)
   }
-
-
+  
   ngOnInit(): void {
     this.load$ = this.route.queryParams.pipe(
       switchMap(
@@ -33,16 +32,20 @@ export class PersonaShowComponent extends ShowComponent {
             return;
           }
           this.load = false;
-          this.initDisplay(queryParams);
+          this.params = queryParams;       
+          this.initDisplay();
 
           return this.initData().pipe(
             map(
-              () => {return this.load = true;}
+              () => {
+                return this.load = true;              
+              }
             )
           )
         }
       )
     );
   }
+
 }
 

@@ -1,0 +1,18 @@
+<ng-template #loading>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>
+
+<mat-card *ngIf="data$ | async as data">
+  <mat-card-header>
+    <mat-card-title>Datos de comision</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="(load$ | async) && load; else loading">
+    <p>Comision Virtual {{data['persona'].id_comision}}</p>
+    <p>Comision Física {{data['persona'].comision_2020}}</p>
+  </mat-card-content>
+</mat-card>
+
+<div *ngIf="(load$ | async) && load; else loading">
+  <!-- app-persona-search [display$]="display$"></app-persona-search -->
+  <app-curso-table *ngIf="load; else loading" [data$]="data$" [collectionSize$]="collectionSize$" [display]="display"></app-curso-table>
+</div>

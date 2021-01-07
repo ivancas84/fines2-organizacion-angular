@@ -76,7 +76,13 @@ import { InputAutocompleteValueComponent } from '@component/input-autocomplete-v
 
 import { PersonaShowComponent } from '@component/persona-show/persona-show/persona-show.component';
 import { PersonaTableComponent } from '@component/persona-show/persona-table/persona-table.component';
+import { AlumnoAdminComponent } from '@component/alumno-admin/persona-admin/persona-admin.component';
+import { AlumnoFieldsetComponent } from '@component/alumno-admin/persona-fieldset/persona-fieldset.component';
 
+import { ListaAlumnosReferenteComponent } from '@component/lista-alumnos-referente/lista-alumnos-referente/lista-alumnos-referente.component';
+import { ListaAlumnosReferenteTableComponent } from '@component/lista-alumnos-referente/lista-alumnos-referente-table/lista-alumnos-referente-table.component';
+import { ArPersonaShowComponent } from '@component/alumnos-referentes-show/persona-show/persona-show.component';
+import { ArPersonaTableComponent } from '@component/alumnos-referentes-show/persona-table/persona-table.component';
 
 @NgModule({
   declarations: [
@@ -110,8 +116,11 @@ import { PersonaTableComponent } from '@component/persona-show/persona-table/per
     LabelComponent,
     DynamicTableComponent,
 
-    PersonaShowComponent, PersonaTableComponent
-
+    PersonaShowComponent, PersonaTableComponent,
+    AlumnoAdminComponent, AlumnoFieldsetComponent,
+    PersonaShowComponent, PersonaTableComponent,
+    ListaAlumnosReferenteComponent, ListaAlumnosReferenteTableComponent,
+    ArPersonaShowComponent, ArPersonaTableComponent,
   ],
   imports: [
     BrowserModule,
